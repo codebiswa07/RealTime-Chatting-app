@@ -14,7 +14,7 @@
 
 **DURATION**: *6 Weeks*
 
-**MENTOR**: *Neela Santosh Kumar*
+**MENTOR**: *Neela Santhosh Kumar*
 
 
 ## ✨ Features
