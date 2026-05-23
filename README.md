@@ -5,10 +5,15 @@
 ---
 
 **COMPANY**: *CODTECH IT SOLUTION*
+
 **NAME**: *Biswaprakash Sahoo*
+
 **INTERN ID**: *CTIS9533*
+
 **DOMAIN**: *Mern Stack Web Development*
+
 **DURATION**: *6 Weeks*
+
 **MENTOR**: *Neela Santosh Kumar*
 
 
