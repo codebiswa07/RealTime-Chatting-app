@@ -1,21 +1,38 @@
 # RealChat — Real-Time Messaging App
 
-> A production-grade real-time chat application built with **React**, **Express**, and **Socket.IO**.
+> > Full-featured, fully-responsive chat with **channels**, **1-to-1 DMs**, read receipts, live presence, typing indicators, toast notifications, and mobile sidebar support.
 
 ---
 
+**COMPANY**: *CODTECH IT SOLUTION*
+**NAME**: *Biswaprakash Sahoo*
+**INTERN ID**: *CTIS9533*
+**DOMAIN**: *Mern Stack Web Development*
+**DURATION**: *6 Weeks*
+**MENTOR**: *Neela Santosh Kumar*
+
+
 ## ✨ Features
 
-| Feature | Details |
+| Feature | Detail |
 |---|---|
-| Real-time messaging | Instant delivery via WebSockets (Socket.IO) |
-| Multiple channels | #general, #random, #dev-talk |
-| Typing indicators | Live "user is typing…" feedback |
-| Message history | Last 100 messages loaded on room join |
-| Member list | Live sidebar showing online users |
-| Custom avatars | 10 DiceBear styles + randomised seeds |
-| System messages | Join / leave / disconnect events |
-| Responsive UI | Dark theme with Syne + DM Mono fonts |
+| Group Channels | #general, #random, #dev-talk, #design |
+| 1-to-1 Direct Messages | Click any online user in sidebar to start private chat |
+| Read Receipts | "✓ Sent" → "✓✓ Read" in DMs |
+| Live Presence | Online / Away / Busy / Invisible with colour-coded dots |
+| Typing Indicators | Per-channel and per-DM animated dots with names |
+| Unread Badges | Red badge count on DM sidebar entries |
+| Toast Notifications | Pop-up alerts when a DM arrives and chat isn't active |
+| Message History | Last 100 messages loaded on room/DM open |
+| Avatar Picker | 10 DiceBear styles with random seed |
+| Responsive Design | Full Tailwind CSS — works on mobile, tablet, desktop |
+| Mobile Sidebar | Hamburger menu with overlay drawer on small screens |
+| Status Picker | Click your avatar row to change status |
+| System Messages | Join/leave/disconnect events as chat notices |
+| Date Grouping | Messages grouped by date with dividers |
+| Dark Theme | Deep dark UI with CSS variable design tokens |
+| Font Stack | Plus Jakarta Sans + JetBrains Mono |
+| Live / Offline Badge | Green LIVE or red OFF indicator in sidebar |
 
 ---
 
@@ -23,38 +40,41 @@
 
 ```
 realtime-chat/
-├── package.json              ← root scripts (concurrently)
+├── package.json                ← root (concurrently dev script)
+├── Procfile                    ← for Railway / Render deployment
 ├── .gitignore
 ├── README.md
-│
 ├── server/
 │   ├── package.json
-│   ├── .env                  ← PORT, CLIENT_ORIGIN
+│   ├── .env
 │   └── src/
-│       └── index.js          ← Express + Socket.IO server
-│
+│       └── index.js            ← Express + Socket.IO
 └── client/
     ├── package.json
     ├── vite.config.js
+    ├── tailwind.config.js      ← design tokens
+    ├── postcss.config.js
     ├── index.html
     └── src/
         ├── main.jsx
         ├── App.jsx
         ├── index.css
         ├── context/
-        │   └── ChatContext.jsx
+        │   └── AppContext.jsx
         ├── hooks/
-        │   └── useSocket.js
+        │   └── useSocket.js    ← all socket logic + useReducer state
         ├── utils/
-        │   └── formatTime.js
+        │   └── time.js
         └── components/
-            ├── LoginScreen.jsx
-            ├── ChatLayout.jsx
-            ├── Sidebar.jsx
-            ├── MessageList.jsx
-            ├── MessageInput.jsx
-            └── MemberPanel.jsx
-```
+            ├── LoginScreen.jsx    ← avatar picker + username form
+            ├── ChatShell.jsx      ← layout + mobile sidebar toggle
+            ├── Sidebar.jsx        ← channels + DM list + status picker
+            ├── ChannelView.jsx
+            ├── DMView.jsx         ← private 1-to-1 chat
+            ├── MessageList.jsx    ← date grouping, read receipts, typing
+            ├── MessageInput.jsx   ← textarea, typing events, send button
+            ├── NotifToast.jsx     ← DM notification pop-up
+            └── EmptyState.jsx     ← welcome / no-selection screen```
 
 ---
 
