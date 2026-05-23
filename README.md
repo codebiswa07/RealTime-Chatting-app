@@ -16,6 +16,8 @@
 
 **MENTOR**: *Neela Santhosh Kumar*
 
+<img width="946" height="473" alt="Image" src="https://github.com/user-attachments/assets/3a3fb6f6-d0e9-408e-9f55-ccebbc743ad5" />
+
 
 ## ✨ Features
 
