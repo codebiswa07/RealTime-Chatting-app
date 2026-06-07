@@ -1,8 +1,7 @@
-require("dotenv").config();
 import { useEffect, useRef, useCallback, useReducer } from "react";
 import { io } from "socket.io-client";
 
-const SOCKET_URL = process.env.VITE_SERVER_URL;
+const SOCKET_URL = import.meta.env.VITE_SERVER_URL;
 
 const initState = {
   connected: false, me: null,
